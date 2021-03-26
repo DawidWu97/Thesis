@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ServiceStation;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class LogoutController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -14,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-
+        $this->middleware('auth');
     }
 
     /**
@@ -22,10 +22,8 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function redirect()
     {
-        $items = ServiceStation::wherenotnull('description')->orderBy('created_at','desc')->take(4)->get();
-
-        return view('welcome', compact('items'));
+        return redirect()->route('frontend.home');
     }
 }

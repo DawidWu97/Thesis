@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('welcome');
 Auth::routes();
-
+Route::get('/logout', 'LogoutController@redirect');
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth','admin']], function () {
     Route::get('/', 'HomeController@index')->name('home');
     // Permissions

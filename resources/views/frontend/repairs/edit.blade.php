@@ -25,13 +25,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="calculated_finish">{{ trans('cruds.repair.fields.calculated_finish') }}</label>
-                                <div class="row">
-                                    <div class="col-6">
+                                <div class="d-flex justify-content-between">
                                         <input class="form-check-input ml-2" type="radio" name="radio" id="automatic" value="auto" checked>
                                         <label class="form-check-label ml-4" for="automatic">
                                             Automatycznie
                                         </label>
-                                    </div>
                                     <div class="col-5">
                                         <input class="form-check-input" type="radio" name="radio" id="manual" value="manual">
                                         <input disabled class="form-control datetime" type="text" name="calculated_finish" id="calculated_finish" value="{{ old('calculated_finish', $repair->calculated_finish) }}">

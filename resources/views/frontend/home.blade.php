@@ -18,33 +18,43 @@
 
                             @can('User')
                                 <div class="m-0 research">
-                                    <div class="row m-0 no-gutters" style="padding-top: 8rem;">
-                                        <div class="col-sm-4" >
-                                            <div class="container-fluid ">
-                                            <div class="row no-gutters">
-                                                <div class="col-md-5 ml-2" style="background-color: black; opacity: 0.7;">
+                                    <div class="row no-gutters m-0" style="padding-top: 7rem;">
+                                        <div class="col-md-4" >
+                                            <div class="p-2" style="background-color: white; opacity:0.8;">
+                                                <center><i class="c-sidebar-nav-icon fas fa-fw fa-calendar"></i></center>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="col-6" style="background-color: white;">
                                                     <input class="form-check-input" type="radio" name="radiobutton" id="fastest" checked>
-                                                    <label style="color: white;" class="form-check-label" for="fastest" id="fastest_label">
-                                                        Jak najszybciej
+                                                    <label style="color:black;" class="form-check-label" for="fastest" id="fastest_label">
+                                                        Najszybciej
                                                     </label>
                                                 </div>
-                                                <div class="col-md-6 ml-2">
+                                                <div class="col-6">
                                                     <input class="form-check-input" type="radio" name="radiobutton" id="possible">
                                                     <input disabled style="height: 1.64rem;"class="form-control date" type="text" name="start" id="start" placeholder="Wybierz date">
                                                 </div>
                                             </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-3">
+                                        <div class="col-md-3">
+                                            <div class="p-2" style="background-color: white; opacity:0.8;">
+                                                <center><i class="c-sidebar-nav-icon fas fa-fw fa-tag"></i></center>
+
                                             <select class="categories">
                                                 @foreach(App\Models\Category::all()->pluck('name', 'id') as $id => $category)
                                                     <option value="{{ $id }}">{{ $category }}</option>
                                                 @endforeach
                                             </select>
+                                            </div>
+
                                         </div>
-                                        <div class="col-sm-5">
-                                            <select class="searchable-field">
+                                        <div class="col-md-5">
+                                            <div class="p-2" style="background-color: white; opacity:0.8;">
+                                                <center><i class="c-sidebar-nav-icon fas fa-fw fa-search"></i></center>
+
+                                                <select class="searchable-field">
                                             </select>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
