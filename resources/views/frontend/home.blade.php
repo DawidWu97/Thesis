@@ -31,7 +31,7 @@
                                                 </div>
                                                 <div class="col-6">
                                                     <input class="form-check-input" type="radio" name="radiobutton" id="possible">
-                                                    <input disabled style="height: 1.64rem;"class="form-control date" type="text" name="start" id="start" placeholder="Wybierz date">
+                                                    <input disabled style="height: 1.64rem;" class="form-control" type="date" name="start" id="start" placeholder="Wybierz date">
                                                 </div>
                                             </div>
                                             </div>
